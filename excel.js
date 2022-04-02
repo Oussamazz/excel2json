@@ -5,9 +5,7 @@ document.getElementById('input').addEventListener("change", (event) => {
 })
 
 let data=[{
-    "name":"jayanth",
-    "data":"scd",
-    "abc":"sdef"
+    "":""
 }]
 
 
@@ -17,7 +15,7 @@ document.getElementById('button').addEventListener("click", () => {
         let fileReader = new FileReader();
         fileReader.readAsBinaryString(selectedFile);
         fileReader.onload = (event)=>{
-         let data = event.target.result;
+         data = event.target.result;
          let workbook = XLSX.read(data,{type:"binary"});
          console.log(workbook);
          workbook.SheetNames.forEach(sheet => {
